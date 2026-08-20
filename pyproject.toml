@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools==80.9.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tsh-e2e-python-uv"
+version = "0.1.0"
+requires-python = ">=3.13"
+dependencies = [
+  "pydantic==2.11.7",
+  "rich==14.1.0",
+]
+
+[project.scripts]
+tsh-e2e-python-uv = "tsh_e2e_python_uv:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
