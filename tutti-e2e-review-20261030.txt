@@ -1,0 +1,3 @@
+GitHub automation review fixture
+Line two for inline review
+Line three for thread resolution
