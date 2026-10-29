@@ -1,2 +1,3 @@
 Tutti GitHub automation E2E fixture, 2026-10-30.
 Only isolated test branches are used.
+Positive draft pull request fixture.
