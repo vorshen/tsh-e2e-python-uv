@@ -1,0 +1,30 @@
+name: Tutti Automation E2E 20261030
+
+on:
+  push:
+    branches:
+      - 'codex/tutti-gh-e2e-20261030-*'
+
+permissions: {}
+
+jobs:
+  controlled-result:
+    name: e2e-controlled-result
+    runs-on: ubuntu-latest
+    timeout-minutes: 2
+    env:
+      TEST_BRANCH: ${{ github.ref_name }}
+    steps:
+      - name: Controlled fixture result
+        shell: bash
+        run: |
+          case "$TEST_BRANCH" in
+            *-failure) printf 'Intentional E2E failure\n'; exit 1 ;;
+          esac
+          printf 'E2E fixture succeeded\n'
+  independent-check:
+    name: e2e-independent-check
+    runs-on: ubuntu-latest
+    timeout-minutes: 2
+    steps:
+      - run: printf 'Independent E2E check completed\n'
