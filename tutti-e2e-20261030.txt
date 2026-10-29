@@ -1,3 +1,4 @@
 Tutti GitHub automation E2E fixture, 2026-10-30.
 Only isolated test branches are used.
 Negative draft PR: author vorshen must not match user filter octocat.
+Draft synchronize should be excluded.
